@@ -2,12 +2,12 @@
 A really SimpleDairy which you can use to do daily Journaling.
 # How To Use
 To start the SimpleDiary, open the latest version of SimpleDiary with 
-##comandline
+## comandline
 open a command-line and type in the word python, 
 or python3 if you have both versions,
 followed by the path to SimpleDiary,
 just like this: $ python SimpleDiary.py 
-##using VsCode
+## using VsCode
 https://code.visualstudio.com/docs/python/python-tutorial
 
 # Features
