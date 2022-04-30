@@ -1,3 +1,5 @@
+# SimpleDiary version --v3 alpha
+
 # <> PROGRESS <>
 # homeScreen()  [WORKING]
 # confirmAction() [WORKING]
@@ -6,7 +8,7 @@
 # readEntry() [WORKING] --> r
 # deleteEntry() [WORKING] --> d
 # to end the program [WORKING] --> e
-
+# saveLocation() [NOT ADDED]
 
 from datetime import datetime
 import os
