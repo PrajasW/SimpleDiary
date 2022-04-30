@@ -16,7 +16,7 @@ import os
 now = datetime.now()
 dayInFileName = now.strftime("%d_%m_%y")
 dayAndTimeInEntry = now.strftime("%d %B, %Y \n\n[%H:%M]\n")
-fileName = f"Dairy_{dayInFileName}.txt"
+fileName = f"Diary_{dayInFileName}.txt"
 dayInFileName = now.strftime("%d_%m_%y")
 timeInEntry = now.strftime("\n[%H:%M]\n")
 firstTime = True
@@ -88,11 +88,11 @@ def addEntry():
 def readEntry():
     day = input("Enter the date(dd/mm/yy) of entry to read:")
     day = day.replace('/','_')
-    readWhat = f"Dairy_{day}.txt"
+    readWhat = f"Diary_{day}.txt"
     if(os.path.exists(readWhat) == True):
         with open(readWhat) as f:
             readDiary = f.read()
-        print("\nThe Dairy Reads,\n")
+        print("\nThe Diary Reads,\n")
         print(readDiary)
     else:
         day = day.replace('_','-')
@@ -101,7 +101,7 @@ def readEntry():
 def deleteEntry():
     day = input("Enter the date(dd/mm/yy) of entry to delete:")
     day = day.replace('/','_')
-    deleteWhat = f"Dairy_{day}.txt"
+    deleteWhat = f"Diary_{day}.txt"
     if(os.path.exists(deleteWhat) == True):
         confirmAction()
         os.remove(deleteWhat)
