@@ -1,6 +1,3 @@
-# SimpleDiary ver--2.7 pre-release
-
-
 # <> PROGRESS <>
 # homeScreen()  [WORKING]
 # confirmAction() [WORKING]
@@ -105,7 +102,7 @@ def deleteEntry():
     day = input("Enter the date(dd/mm/yy) of entry to delete:")
     day = day.replace('/','_')
     deleteWhat = f"Dairy_{day}.txt"
-    if(os.path.exits(deleteWhat) == True):
+    if(os.path.exists(deleteWhat) == True):
         confirmAction()
         os.remove(deleteWhat)
         print(f"{deleteWhat} is Deleted")
