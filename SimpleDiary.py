@@ -1,3 +1,6 @@
+# SimpleDiary ver--2.7 pre-release
+
+
 # <> PROGRESS <>
 # homeScreen()  [WORKING]
 # confirmAction() [WORKING]
