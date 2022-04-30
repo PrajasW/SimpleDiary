@@ -13,11 +13,11 @@ https://code.visualstudio.com/docs/python/python-tutorial
 # Features
 ## Key Words
 _what would you like to do?_
--a --> to add new conetent to today's entry
--d --> to delete _Dairy_DateToDelete_ of any day
--e --> to exit the program
--n --> to create a new Entry for the Day
--r --> to read th  dairy of 
+- a --> to add new conetent to today's entry
+- d --> to delete _Dairy_DateToDelete_ of any day
+- e --> to exit the program
+- n --> to create a new Entry for the Day
+- r --> to read th  dairy of 
 
 _adding a new line_
 To write a line on a new line in the dairy type **<>**
