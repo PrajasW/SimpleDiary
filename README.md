@@ -25,8 +25,10 @@ _how to add a new line?_
 To create a New Entry for the day.
 This entry is saved in as a text file with name _/Dairy_EntryDate_
 The text file can be viewed using any text ediotor or can use the **read** instruction
+The Entry after confirmation **can not be edited**
 ## Add To Entry (a)
-To add a new Entry to the day
+To add a new Entry to the day 
+The Entry after confirmation **can not be edited**
 ## Read Entry (r)
 To read Diary of Any Day you enter
 ## Delete Entry (d)
