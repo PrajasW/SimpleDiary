@@ -1,5 +1,4 @@
 # <> PROGRESS <>
-# savePath [WIP]
 # homeScreen()  [WORKING]
 # confirmAction() [WORKING]
 # newEntry() [WORKING] --> n
@@ -56,7 +55,7 @@ def homeScreen():
             homeScreen()
 
 def confirmAction():
-    confirmSent = input("Are You Sure?:")
+    confirmSent = input("\nAre You Sure?:")
     confirmKey = confirmSent.lower()[0]
 
     if(confirmKey == 'n'):
@@ -75,29 +74,35 @@ def newEntry():
         Entry.write(f"{dayAndTimeInEntry}"+newEntryEdit)
 
 def addEntry():
-    addEntry = input(now.strftime("[%H:%M]\n"))
+    addEntry = input(now.strftime("\n[%H:%M]\n"))
     addEntryEdit = addEntry.replace('<>','\n')
-    with open(fileName) as f:
-        oldEntry = fileName
     
-    with open(fileName,'a') as f:
-        confirmAction()
-        f.write(f"{timeInEntry}" + addEntryEdit)
+    if(os.path.exists()):
+        with open(fileName) as f:
+            oldEntry = fileName
+        with open(fileName,'a') as f:
+            confirmAction()
+            f.write(f"{timeInEntry}" + addEntryEdit)
+    else:
+        print("Create a New Entry first")
 
 def readEntry():
     day = input("Enter the date(dd/mm/yy) of entry to read:")
     day = day.replace('/','_')
     readWhat = f"Dairy_{day}.txt"
-    with open(readWhat) as f:
-        readDiary = f.read() + '\n'
-    print("The Dairy Reads\n\n")
-    print(readDiary)
+    if(os.path.exists(readWhat) == True):
+        with open(readWhat) as f:
+            readDiary = f.read() + '\n'
+        print("\nThe Dairy Reads,\n")
+        print(readDiary)
+    else:
+        print(f"No Entry for {day}")
 
 def deleteEntry():
     day = input("Enter the date(dd/mm/yy) of entry to delete:")
     day = day.replace('/','_')
     deleteWhat = f"Dairy_{day}.txt"
-    if(os.path.isfile(deleteWhat) ==True):
+    if(os.path.exits(deleteWhat) == True):
         confirmAction()
         os.remove(deleteWhat)
         print(f"{deleteWhat} is Deleted")
