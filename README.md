@@ -11,7 +11,7 @@ just like this: $ python SimpleDiary.py
 https://code.visualstudio.com/docs/python/python-tutorial
 
 # Features
-## Key Words
+## KeyWords
 _what would you like to do?_
 - a --> to add new conetent to today's entry
 - d --> to delete _Dairy_DateToDelete_ of any day
@@ -19,9 +19,8 @@ _what would you like to do?_
 - n --> to create a new Entry for the Day
 - r --> to read th  dairy of 
 
-_adding a new line_
-To write a line on a new line in the dairy type **<>**
-The data after **<>** will be written in a new line
+_how to add a new line?_
+> To write a line on a new line in the dairy type **<>** The data after **<>** will be written in a new line
 ## New Entry (n)
 To create a New Entry for the day.
 This entry is saved in as a text file with name _/Dairy_EntryDate_
