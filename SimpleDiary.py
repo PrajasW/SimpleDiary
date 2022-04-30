@@ -28,7 +28,7 @@ def homeScreen():
     global passValue
     global firstTime
     if(firstTime == True):
-        doWhat = input("### WELCOME TO SIMPLE DIARY ###\nWhat would you like to do? \n")
+        doWhat = input("\n### WELCOME TO SIMPLE DIARY ###\nWhat would you like to do? \n")
         firstTime = False
     else:
         doWhat = input("\nWhat else would you like to do? \n")
@@ -55,7 +55,7 @@ def homeScreen():
             homeScreen()
 
 def confirmAction():
-    confirmSent = input("\nAre You Sure?:")
+    confirmSent = input("\nConfirm Action?:")
     confirmKey = confirmSent.lower()[0]
 
     if(confirmKey == 'n'):
@@ -74,10 +74,9 @@ def newEntry():
         Entry.write(f"{dayAndTimeInEntry}"+newEntryEdit)
 
 def addEntry():
-    addEntry = input(now.strftime("\n[%H:%M]\n"))
-    addEntryEdit = addEntry.replace('<>','\n')
-    
     if(os.path.exists(fileName)):
+        addEntry = input(now.strftime("\n[%H:%M]\n"))
+        addEntryEdit = addEntry.replace('<>','\n')
         with open(fileName) as f:
             oldEntry = fileName
         with open(fileName,'a') as f:
@@ -92,10 +91,11 @@ def readEntry():
     readWhat = f"Dairy_{day}.txt"
     if(os.path.exists(readWhat) == True):
         with open(readWhat) as f:
-            readDiary = f.read() + '\n'
+            readDiary = f.read()
         print("\nThe Dairy Reads,\n")
         print(readDiary)
     else:
+        day = day.replace('_','-')
         print(f"No Entry for {day}")
 
 def deleteEntry():
@@ -107,6 +107,7 @@ def deleteEntry():
         os.remove(deleteWhat)
         print(f"{deleteWhat} is Deleted")
     else:
+        day = day.replace('_','-')
         print(f"No Entry for {day}")
 
 # Main function
