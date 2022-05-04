@@ -1,14 +1,14 @@
 # SimpleDiary version --v3.4 alpha
 
 # <> PROGRESS <>
-# homeScreen()  [WORKING]
-# confirmAction() [WORKING]
-# newEntry() [WORKING] --> n
-# addEntry() [WORKING] --> a
-# readEntry() [WORKING] --> r
-# deleteEntry() [WORKING] --> d
-# to end the program [WORKING] --> e
-# saveLocation() [NOT ADDED]
+# homeScreen()  [DONE]
+# confirmAction() [DONE]
+# newEntry() [DONE] --> n
+# addEntry() [DONE] --> a
+# readEntry() [DONE] --> r
+# deleteEntry() [DONE] --> d
+# to end the program [DONE] --> e
+# saveFolder [DONE]
 
 from datetime import datetime
 from fileinput import filename
