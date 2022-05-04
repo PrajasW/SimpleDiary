@@ -21,6 +21,9 @@ _what would you like to do?_
 
 _how to add a new line?_
 > To write a line on a new line in the dairy type **<>** The data after **<>** will be written in a new line
+_how to choose save location?_
+> Create a Folder and add the path toh the line 20 of the program in "saveFolder"    
+>   <img width="337" alt="image" src="https://user-images.githubusercontent.com/74056138/166741075-7ed3f854-5125-41e0-a265-636b5dd77ef3.png">
 ## New Entry (n)
 To create a New Entry for the day.
 This entry is saved in as a text file with name _/Dairy_EntryDate_
