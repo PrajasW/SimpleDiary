@@ -8,7 +8,7 @@
 # readEntry() [DONE] --> r
 # deleteEntry() [DONE] --> d
 # to end the program [DONE] --> e
-# saveFolder [DONE]
+# <<NEW>> saveFolder [DONE]
 
 from datetime import datetime
 from fileinput import filename
