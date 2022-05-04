@@ -1,4 +1,4 @@
-# SimpleDiary version --v3 alpha
+# SimpleDiary version --v3.4 alpha
 
 # <> PROGRESS <>
 # homeScreen()  [WORKING]
@@ -11,26 +11,28 @@
 # saveLocation() [NOT ADDED]
 
 from datetime import datetime
+from fileinput import filename
+from genericpath import exists
 import os
 
 # <><>Program<><>
+# Hardcode the saveFolder Location here
+saveFolder = 'DiaryData'
+
 
 now = datetime.now()
 dayInFileName = now.strftime("%d_%m_%y")
 dayAndTimeInEntry = now.strftime("%d %B, %Y \n\n[%H:%M]\n")
-fileName = f"Diary_{dayInFileName}.txt"
+fileName = f"{saveFolder}\\Diary_{dayInFileName}.txt"
 dayInFileName = now.strftime("%d_%m_%y")
 timeInEntry = now.strftime("\n[%H:%M]\n")
 firstTime = True
 
-def saveLocation():
-    pass
 
 def homeScreen():
-    global passValue
     global firstTime
     if(firstTime == True):
-        doWhat = input("\n### WELCOME TO SIMPLE DIARY ###\nWhat would you like to do? \n")
+        doWhat = input("\n### WELCOME TO SIMPLE DIARY ###\n\nWhat would you like to do? \n")
         firstTime = False
     else:
         doWhat = input("\nWhat else would you like to do? \n")
@@ -56,8 +58,8 @@ def homeScreen():
             readEntry()
             homeScreen()
 
-def confirmAction():
-    confirmSent = input("\nConfirm Action?:")
+def confirmAction(action = 'Confirm Action'):
+    confirmSent = input(f"\n{action}?:")
     confirmKey = confirmSent.lower()[0]
 
     if(confirmKey == 'n'):
@@ -66,9 +68,14 @@ def confirmAction():
         pass
     else:
         print("Invalid Input")
-        confirmAction()
+        confirmAction(action)
 
 def newEntry():
+
+    if(exists(fileName)):
+        confirmAction('File Already Exists Overwrite Data?')
+
+
     newEntry = input(now.strftime("\n[%H:%M]\n"))
     newEntryEdit = newEntry.replace("<>","\n")
     confirmAction()
@@ -90,7 +97,7 @@ def addEntry():
 def readEntry():
     day = input("Enter the date(dd/mm/yy) of entry to read:")
     day = day.replace('/','_')
-    readWhat = f"Diary_{day}.txt"
+    readWhat = f"{saveFolder}\\Diary_{day}.txt"
     if(os.path.exists(readWhat) == True):
         with open(readWhat) as f:
             readDiary = f.read()
@@ -103,7 +110,7 @@ def readEntry():
 def deleteEntry():
     day = input("Enter the date(dd/mm/yy) of entry to delete:")
     day = day.replace('/','_')
-    deleteWhat = f"Diary_{day}.txt"
+    deleteWhat = f"{saveFolder}\\Diary_{day}.txt"
     if(os.path.exists(deleteWhat) == True):
         confirmAction()
         os.remove(deleteWhat)
