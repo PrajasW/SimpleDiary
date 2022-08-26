@@ -1,4 +1,4 @@
-# SimpleDiary version --v3.4 alpha
+# SimpleDiary version --v3.5 alpha
 
 # <> PROGRESS <>
 # homeScreen()  [DONE]
@@ -9,6 +9,9 @@
 # deleteEntry() [DONE] --> d
 # to end the program [DONE] --> e
 # <<NEW>> saveFolder [DONE]
+# <<NEW>> help [DONE]
+# Now put double space for new line
+# changed the save data to have a extra line in time
 
 from datetime import datetime
 from fileinput import filename
@@ -35,10 +38,10 @@ def homeScreen():
         doWhat = input("\n### WELCOME TO SIMPLE DIARY ###\n\nWhat would you like to do? \n")
         firstTime = False
     else:
-        doWhat = input("\nWhat else would you like to do? \n")
+        doWhat = input("\nWhat would you like to do? \n")
     
     doWhatKey = doWhat.lower()[0]
-    validKeys = ['a','d','e','n','r']
+    validKeys = ['a','d','e','n','r','h']
     if(doWhatKey not in validKeys):
         print("Invalid Input")
         homeScreen()
@@ -57,6 +60,9 @@ def homeScreen():
         if(doWhatKey == 'r'):
             readEntry()
             homeScreen()
+        if(doWhatKey == 'h'):
+            help()
+            homeScreen()
 
 def confirmAction(action = 'Confirm Action'):
     confirmSent = input(f"\n{action}?:")
@@ -70,6 +76,14 @@ def confirmAction(action = 'Confirm Action'):
         print("Invalid Input")
         confirmAction(action)
 
+def help():
+    print('''a --> to add new conetent to today's entry
+d --> to delete Dairy_DateToDelete of any day
+e --> to exit the program
+n --> to create a new Entry for the Day
+r --> to read th dairy of
+h --> help''')
+
 def newEntry():
 
     if(exists(fileName)):
@@ -77,7 +91,7 @@ def newEntry():
 
 
     newEntry = input(now.strftime("\n[%H:%M]\n"))
-    newEntryEdit = newEntry.replace("<>","\n")
+    newEntryEdit = newEntry.replace("  ","\n")
     confirmAction()
     with open(fileName,'w') as Entry:
         Entry.write(f"{dayAndTimeInEntry}"+newEntryEdit)
