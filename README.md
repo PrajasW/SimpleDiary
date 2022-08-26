@@ -20,7 +20,7 @@ _what would you like to do?_
 - r --> to read th  dairy of 
 
 _how to add a new line?_
-> To write a line on a new line in the dairy type **<>** The data after **<>** will be written in a new line
+> To write a line on a new line in the dairy type **two spaces** The data after **two spaces** will be written in a new line
 ## New Entry (n)
 To create a New Entry for the day.
 This entry is saved in as a text file with name _/Dairy_EntryDate_
