@@ -1,4 +1,4 @@
-# SimpleDiary version --v3.5 alpha
+# SimpleDiary version --v3.6 alpha 
 
 # <> PROGRESS <>
 # homeScreen()  [DONE]
