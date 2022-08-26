@@ -1,4 +1,4 @@
-# SimpleDiary version --v3.6 alpha 
+# SimpleDiary version --v3.7 alpha
 
 # <> PROGRESS <>
 # homeScreen()  [DONE]
@@ -9,7 +9,7 @@
 # deleteEntry() [DONE] --> d
 # to end the program [DONE] --> e
 # <<NEW>> saveFolder [DONE]
-# <<NEW>> help [DONE] --> h
+# <<NEW>> help [DONE]
 # Now put double space for new line
 # changed the save data to have a extra line in time
 
@@ -134,6 +134,7 @@ def deleteEntry():
         print(f"No Entry for {day}")
 
 # Main function
+print("### WELCOME TO SIMPLE DIARY ###")
 homeScreen()
 
 
