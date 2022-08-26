@@ -9,7 +9,7 @@
 # deleteEntry() [DONE] --> d
 # to end the program [DONE] --> e
 # <<NEW>> saveFolder [DONE]
-# <<NEW>> help [DONE]
+# <<NEW>> help [DONE] --> h
 # Now put double space for new line
 # changed the save data to have a extra line in time
 
