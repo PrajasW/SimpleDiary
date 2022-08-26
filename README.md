@@ -1,5 +1,5 @@
 # SimpleDiary
-A really SimpleDairy which you can use to do daily Journaling.
+A really SimpleDairy which you can use to do daily Journaling in the Terimal.
 # How To Use
 To start the SimpleDiary, open the latest version of SimpleDiary with 
 ## comandline
@@ -21,6 +21,9 @@ _what would you like to do?_
 
 _how to add a new line?_
 > To write a line on a new line in the dairy type **two spaces** The data after **two spaces** will be written in a new line
+
+## help (h)
+To see the commands for actions
 ## New Entry (n)
 To create a New Entry for the day.
 This entry is saved in as a text file with name _/Dairy_EntryDate_
