@@ -23,7 +23,7 @@ _how to add a new line?_
 > To write a line on a new line in the dairy type **two spaces** The data after **two spaces** will be written in a new line
 
 ## help (h)
-To see the commands for actions
+To see the keywords
 ## New Entry (n)
 To create a New Entry for the day.
 This entry is saved in as a text file with name _/Dairy_EntryDate_
