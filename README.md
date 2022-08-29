@@ -1,5 +1,5 @@
 # SimpleDiary
-A really SimpleDairy which you can use to do daily Journaling in the Terimal.
+A really SimpleDiary which you can use to do daily Journaling in the Terimal.
 # How To Use
 To start the SimpleDiary, open the latest version of SimpleDiary with 
 ## comandline
